@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nginx-proxy:
+    image: nginx:latest
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./saathi-proxy.conf:/etc/nginx/conf.d/saathi-proxy.conf:ro
